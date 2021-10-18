@@ -1,0 +1,17 @@
+{
+  "name": "seo4net/dhl-client",
+  "description": "Client for DHL",
+  "type": "library",
+  "require": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "DHLClient\\": "src/"
+    }
+  },
+  "require-dev": {
+    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+    "phpunit/phpunit": "^5"
+  }
+}
