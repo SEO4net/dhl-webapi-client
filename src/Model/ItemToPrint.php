@@ -4,57 +4,24 @@ namespace DHLClient\Model;
 
 class ItemToPrint
 {
+    private ?string $shipmentId;
+    private ?LabelType $labelType;
 
-    /**
-     * @var string $labelType
-     */
-    protected $labelType = null;
-
-    /**
-     * @var string $shipmentId
-     */
-    protected $shipmentId = null;
-
-    
-    public function __construct()
-    {
-    
+    public function __construct(
+        ?string $shipmentId,
+        ?LabelType $labelType
+    ) {
+        $this->shipmentId = $shipmentId;
+        $this->labelType = $labelType;
     }
 
-    /**
-     * @return string
-     */
-    public function getLabelType()
+    public function getShipmentId(): ?string
     {
-      return $this->labelType;
+        return $this->shipmentId;
     }
 
-    /**
-     * @param string $labelType
-     * @return \DHLClient\Model\ItemToPrint
-     */
-    public function setLabelType($labelType)
+    public function getLabelType(): ?LabelType
     {
-      $this->labelType = $labelType;
-      return $this;
+        return $this->labelType;
     }
-
-    /**
-     * @return string
-     */
-    public function getShipmentId()
-    {
-      return $this->shipmentId;
-    }
-
-    /**
-     * @param string $shipmentId
-     * @return \DHLClient\Model\ItemToPrint
-     */
-    public function setShipmentId($shipmentId)
-    {
-      $this->shipmentId = $shipmentId;
-      return $this;
-    }
-
 }
