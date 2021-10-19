@@ -6,7 +6,7 @@ class ServiceDefinition
 {
 
     /**
-     * @var string $product
+     * @var string|ServiceDefinition $product
      */
     protected $product = null;
 
@@ -102,7 +102,7 @@ class ServiceDefinition
     }
 
     /**
-     * @return string
+     * @return string|ServiceDefinition
      */
     public function getProduct()
     {
@@ -110,7 +110,7 @@ class ServiceDefinition
     }
 
     /**
-     * @param string $product
+     * @param string|ServiceDefinition $product
      * @return \DHLClient\Model\ServiceDefinition
      */
     public function setProduct($product)

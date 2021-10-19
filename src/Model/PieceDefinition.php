@@ -4,9 +4,8 @@ namespace DHLClient\Model;
 
 class PieceDefinition
 {
-
     /**
-     * @var string $type
+     * @var string|PackageType $type
      */
     protected $type = null;
 
@@ -50,14 +49,12 @@ class PieceDefinition
      */
     protected $euroReturn = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
-     * @return string
+     * @return string|PackageType
      */
     public function getType()
     {
@@ -65,7 +62,7 @@ class PieceDefinition
     }
 
     /**
-     * @param string $type
+     * @param string|PackageType $type
      * @return \DHLClient\Model\PieceDefinition
      */
     public function setType($type)

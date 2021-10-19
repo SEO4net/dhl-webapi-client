@@ -6,12 +6,12 @@ class PaymentData
 {
 
     /**
-     * @var string $paymentMethod
+     * @var string|PaymentMethod $paymentMethod
      */
     protected $paymentMethod = null;
 
     /**
-     * @var string $payerType
+     * @var string|PaymentType $payerType
      */
     protected $payerType = null;
 
@@ -32,7 +32,7 @@ class PaymentData
     }
 
     /**
-     * @return string
+     * @return string|PaymentMethod
      */
     public function getPaymentMethod()
     {
@@ -40,7 +40,7 @@ class PaymentData
     }
 
     /**
-     * @param string $paymentMethod
+     * @param string|PaymentMethod $paymentMethod
      * @return \DHLClient\Model\PaymentData
      */
     public function setPaymentMethod($paymentMethod)
@@ -50,7 +50,7 @@ class PaymentData
     }
 
     /**
-     * @return string
+     * @return string|PaymentType
      */
     public function getPayerType()
     {
@@ -58,7 +58,7 @@ class PaymentData
     }
 
     /**
-     * @param string $payerType
+     * @param string|PaymentType $payerType
      * @return \DHLClient\Model\PaymentData
      */
     public function setPayerType($payerType)
